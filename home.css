@@ -1,0 +1,143 @@
+* {
+	margin: 0; 
+	padding: 0;
+}
+body {
+	background-color: silver; 
+	width: 100%; 
+	height: 800px;
+	font-family: Times, TimesNR, 'New Century Schoolbook', Georgia, 'New York', serif;
+}
+div.banner {
+	width: 100%; 
+	height: 10%; 
+	background-color: #3984b9; 
+	position: relative;
+}
+div.banner .banContent {
+	position: fixed; 
+	top: 0; 
+	left: 0;
+}
+div.main {
+	width: 100%; 
+	height: 80%; 
+	background-color: #5898c5;
+	/*background-color: #1d8dbf; */
+	margin-top: 1em; 
+	display: flex; 
+	flex-direction: row; 
+	justify-content: flex-start;
+}
+div.left {
+	flex: 0 1 150px; 
+	height: 100%; 
+}
+div.right {
+	flex: 0 1 200px; 
+	height: 100%; 
+}
+div.middle {
+	flex: 1; 
+	height: 100%; 
+	background-color: white; 
+}
+p.monitor, 
+div.midContent, 
+div.rigTitle, 
+p.result {
+	font-size: 20px; 
+	font-weight: bold;
+}
+p.monitor:hover {
+	cursor: pointer;
+}
+ul.nav {
+	display: none;
+	width: 100%; 
+	margin-left: 5px; 
+	padding: 0;
+	list-style-type:none;
+}
+ul.nav li, 
+p.condition {
+	margin: 10px 0; 
+	background-color:#88c3de; 
+	font-size: 18px; 
+	width: 60%;
+}
+div.midContent {
+	width: 100%; 
+	height: 30px; 
+	background-color: #cde7f3; 
+	text-align: center; 
+	font-family: Times, TimesNR, 'New Century Schoolbook', Georgia, 'New York', serif;
+}
+form {font-size: 14px; 
+	color: white;
+}
+table.info { 
+	font-size:16px; 
+	color:#333333; 
+	border: solid 2px #a9c6c9; 
+	border-collapse: collapse;
+}
+table.info th, 
+table.info td {
+	padding: 4px; 
+	border: solid 2px #a9c6c9;
+}
+div.serInfo {
+	display: none;
+	position: fixed; 
+	top: 150px; 
+	left: 160px;
+}
+.video{
+		width: 100%;
+		height: calc(100% - 30px);
+	}
+.videoS1 {
+	width: 50%;
+	height: 50%;
+	/*border-left: 2px solid #cde7f3;*/
+	border-right: 2px solid #cde7f3;
+	border-bottom: 2px solid #cde7f3;
+	float: left;
+}
+.videoS2{
+	width: 49%;
+	height: 50%;
+	border-left: 2px solid #cde7f3;
+	/*border-right: 2px solid #cde7f3;*/
+	border-bottom: 2px solid #cde7f3;
+	float: left;
+}
+.videoS3 {
+	width: 50%;
+	height: 49%;
+	border-top: 2px solid #cde7f3;
+	border-right: 2px solid #cde7f3;
+	float: left;
+}
+.videoS4{
+	width: 49%;
+	height: 49%;
+	border-left: 2px solid #cde7f3;
+	border-top: 2px solid #cde7f3;
+	float: left;
+}
+.video video{
+	height: 100%; 
+	width: 100%;
+}
+p.select {
+	font-size: 18px; 
+	font-weight: bold;
+}
+input {
+	margin-left: 10px;
+}
+.rigContent img {
+	margin-top: 10px;
+}

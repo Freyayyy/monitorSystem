@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="home.css">
+<html>
+<head>
+<title>监控主界面</title>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="banner" >
+	<img src="image/img1.png" height="100%" width="100%">
+	<div class="banContent">
+		<img src="image/img2.jpg" height="35" width="35">
+	    <p style="font-size: 32px; font-weight: bolder;margin: 0 0 0 100px; color: white">智能视频监控系统</p>
+	</div>
+</div>
+<div class="main">
+	<div class="left">
+      <p class="monitor">监控设备</p>
+      <ul class="nav">
+	     <li>设备1号</li>
+	     <li>设备2号</li>
+	     <li>设备3号</li>
+	     <li>设备4号</li>
+      </ul>	
+	</div>
+	<div class="middle">
+		<div class="midContent">监控区域</div>
+		<div class="video">
+			<div class="videoS1"><video src="image/video.mp4" controls="controls"></video></div>
+			<div class="videoS2"><video src="image/video1.mp4" controls="controls" width="200" height="200"></video></div>
+			<div class="videoS3"><video src="image/video.mp4" controls="controls"></video></div>
+			<div class="videoS4"><video src="image/video.mp4" controls="controls"></video></div>
+		</div>
+	</div>
+	<div class="serInfo">
+		<table class="info" width="400" border="1">
+			 <tr>
+			  <th align="center" colspan="4">摄像机列表</th>
+			 </tr>
+			 <tr>
+			  <td align="left">编号</td>
+			  <td align="left">监控站点</td>
+			  <td align="left">连接状态</td>
+			  <td align="left">备注</td>
+			 </tr>
+			 <tr>
+			  <td align="left">1</td>
+			  <td align="left">二环南路</td>
+			  <td align="left">已连接</td>
+			  <td align="left">已连接</td>
+			 </tr>
+			 <tr>
+			  <td align="left">2</td>
+			  <td align="left">地铁口</td>
+			  <td align="left">未连接</td>
+			  <td align="left">已连接</td>
+			 </tr>
+			 <tr>
+			  <td align="left">3</td>
+			  <td align="left">二环</td>
+			  <td align="left">已连接</td>
+			  <td align="left">已连接</td>
+			 </tr>
+			 <tr>
+			  <td align="left">4</td>
+			  <td align="left">校园</td>
+			  <td align="left">未连接</td>
+			  <td align="left">已连接</td>
+			 </tr>
+		</table>
+	</div>
+	<div class="right">
+		<div class="rigTitle" style="height: 5%">场景检测</div>
+		<div class="rigContent" style="height: 55%; border: 2px solid #cde7f3;">
+			<p class="select" style="margin-top: 5px">选择监控区:</p>
+			<form>
+				<input type="radio" name="sight" value="sig1" checked>一区
+				<input type="radio" name="sight" value="sig2">二区
+				<br>
+				<input type="radio" name="sight" value="sig3">三区
+				<input type="radio" name="sight" value="sig3">四区
+			</form>
+			<p class="select" style="margin-top: 5px">选择前景控测方法:</p>
+			<p class="condition">*静态场景</p>
+			<form>
+				<input type="radio" name="sight" value="sig1" checked>两帧差分法
+				<br>
+				<input type="radio" name="sight" value="sig2">改进的两帧差分法
+				<br>
+				<input type="radio" name="sight" value="sig3">单高斯背景建模
+				<br>
+				<input type="radio" name="sight" value="sig3">ViBe模型
+			</form>
+			<p class="condition">*动态场景</p>
+			<form>
+				<input type="radio" name="sight" value="sig1" checked>混合高斯模型
+				<br>
+				<input type="radio" name="sight" value="sig2">改进的ViBe模型
+			</form> 
+			<p class="condition">*晃动场景</p>
+			<form>	
+				<input type="radio" name="sight" value="sig1" checked>晃动场景
+				<br>
+				<input type="radio" name="sight" value="sig2">背景差分法
+
+			</form> 
+		</div>
+		<div class="rigContent" style="height: 40%">
+			<p class="result">检测结果</p>
+			<img src="image/img3.jpg" width="200px" height="200px">
+		</div>
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".monitor").bind("click", function(){
+		if($("ul.nav").is(":visible")){
+			$("ul.nav").hide();
+		}else{
+			$("ul.nav").show();
+		}
+    })
+
+    $(".monitor").hover(function(){
+    	$("div.serInfo").show();
+    	$("div.video").hide();   	
+    },function(){
+    	$("div.serInfo").hide();
+    	$("div.video").show();  
+    })
+})
+</script>
+</html>
