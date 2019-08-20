@@ -1,0 +1,2 @@
+# monitorSystem
+用jQuery实现一个智能视频监控系统的界面
